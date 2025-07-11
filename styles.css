@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+}
+
+.nav-lft {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.logo {
+    width: auto;
+    height: 90%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 100%;
+    height: 50px;
+}
+
+.logo-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-mid {
+    display: flex;
+    flex: 1;
+    max-width: 850px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: flex-start;
+    background-color: #dadada;
+}
+
+.search-button {
+    background-color: #dadada;
+    cursor: pointer;
+    border: none;
+    width: 45px;
+    height: 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-shrink: 0;
+}
+
+.search-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.filter {
+    display: flex;
+    width: 40%;
+    margin: 30px 30px 0px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    height: 32px;
+    width: 80px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px #747171;
+    border: none;
+    cursor: pointer;
+    scale: 0.92;
+}
+
+.filter button:hover {
+    border: 1px solid #ccc;
+    background-color: #dadada;
+    scale: 1;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 32px;
+}
+
+.image-card {
+    background-color: #f9f9f9;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-card:hover {
+    transform: scale(1.03);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.img-caption {
+    height: 15%;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    background-color: #e0cece;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@media screen and (min-width: 1000px) {
+    .image-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.light-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    box-sizing: border-box;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.lyt-cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.lyt-cnt img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.lyt-lft,
+.lyt-ryt {
+    width: 5vw;
+    height: 5vw;
+    margin: 3vw;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    background-color: transparent;
+}
+
+
+i {
+    font-size: 5vw;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    left: 91%;
+    top: 6%;
+    z-index: 999;
+    display: none;
+}
+
+.close i {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+body.noscroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+@media (max-width : 600px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .filter {
+        width: 50%;
+    }
+
+    .tag {
+        height: 20px;
+        width: 32px;
+        font-size: 8px;
+    }
+
+    .lyt-cnt {
+        width: 80%;
+        height: 50%;
+    }
+}

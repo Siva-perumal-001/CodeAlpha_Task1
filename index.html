@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" href="images/favi.jpg" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Preconnect to improve font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load Poppins font with weights 400, 500, and 700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="nav-lft" href="index.html">
+            <div class="logo">
+                <img src="images/favi.jpg" alt="logo" class="logo-img">
+            </div>
+            <div class="logo-text">
+                Image Gallery
+            </div>
+        </a>
+
+        <div class="nav-mid">
+            <input class="search-bar" type="text" placeholder="Search Images">
+            <button class="search-button">
+                <img class="search-icon" src="images/icons/search-icon.png" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="filter">
+        <button class="tag">All</button>
+        <button class="tag">Nature</button>
+        <button class="tag">People</button>
+        <button class="tag">City</button>
+        <button class="tag">Animal</button>
+    </div>
+
+    <div class="image-gallery">
+        <div class="image-card" data-category="Nature" data-title="Forest">
+            <img src="images/img1.jpg" alt="Image 1">
+            <div class="img-caption">Forest</div>
+        </div>
+        <div class="image-card" data-category="Nature" data-title="Hill">
+            <img src="images/img2.jpg" alt="Image 2">
+            <div class="img-caption">Hill</div>
+        </div>
+        <div class="image-card" data-category="Nature" data-title="Water falls">
+            <img src="images/img3.jpg" alt="Image 3">
+            <div class="img-caption">Water falls</div>
+        </div>
+        <div class="image-card" data-category="Nature" data-title="Beach">
+            <img src="images/img4.jpg" alt="Image 4">
+            <div class="img-caption">Beach</div>
+        </div>
+        <div class="image-card" data-category="Nature" data-title="Farm">
+            <img src="images/img5.jpg" alt="Image 5">
+            <div class="img-caption">Farm</div>
+        </div>
+        <div class="image-card" data-category="People" data-title="Women">
+            <img src="images/img6.jpg" alt="Image 6">
+            <div class="img-caption">Women</div>
+        </div>
+        <div class="image-card" data-category="People" data-title="Men">
+            <img src="images/img7.jpg" alt="Image 7">
+            <div class="img-caption">Men</div>
+        </div>
+        <div class="image-card" data-category="People" data-title="Father & Daughter">
+            <img src="images/img8.jpg" alt="Image 8">
+            <div class="img-caption">Father & Daughter</div>
+        </div>
+        <div class="image-card" data-category="People" data-title="People">
+            <img src="images/img9.jpg" alt="Image 9">
+            <div class="img-caption">People</div>
+        </div>
+        <div class="image-card" data-category="People" data-title="Crowd">
+            <img src="images/img10.jpg" alt="Image 10">
+            <div class="img-caption">Crowd</div>
+        </div>
+        <div class="image-card" data-category="City" data-title="Dubai">
+            <img src="images/img11.jpg" alt="Image 11">
+            <div class="img-caption">Dubai</div>
+        </div>
+        <div class="image-card" data-category="City" data-title="Malaysia">
+            <img src="images/img12.jpg" alt="Image 12">
+            <div class="img-caption">Malaysia</div>
+        </div>
+        <div class="image-card" data-category="City" data-title="Japan">
+            <img src="images/img13.jpg" alt="Image 13">
+            <div class="img-caption">Japan</div>
+        </div>
+        <div class="image-card" data-category="City" data-title="Singapore">
+            <img src="images/img14.jpg" alt="Image 14">
+            <div class="img-caption">Singapore</div>
+        </div>
+        <div class="image-card" data-category="City" data-title="Delhi">
+            <img src="images/img15.jpg" alt="Image 15">
+            <div class="img-caption">Delhi</div>
+        </div>
+        <div class="image-card" data-category="Animal" data-title="Fox">
+            <img src="images/img16.jpg" alt="Image 16">
+            <div class="img-caption">Fox</div>
+        </div>
+        <div class="image-card" data-category="Animal" data-title="Lion">
+            <img src="images/img17.jpg" alt="Image 17">
+            <div class="img-caption">Lion</div>
+        </div>
+        <div class="image-card" data-category="Animal" data-title="Cheetah">
+            <img src="images/img18.jpg" alt="Image 18">
+            <div class="img-caption">Cheetah</div>
+        </div>
+        <div class="image-card" data-category="Animal" data-title="Panda">
+            <img src="images/img19.jpg" alt="Image 19">
+            <div class="img-caption">Panda</div>
+        </div>
+        <div class="image-card" data-category="Animal" data-title="Elephant">
+            <img src="images/img20.jpg" alt="Image 20">
+            <div class="img-caption">Elephant</div>
+        </div>
+    </div>
+
+    <div class="light-box">
+        <button class="lyt-lft">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <div class="lyt-cnt">
+            <img src="images/img18.jpg" alt="">
+        </div>
+        <button class="lyt-ryt">
+            <i class="ri-arrow-right-s-line"></i>
+        </button>
+        <button class="close"><i class="ri-close-circle-line"></i></button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
