@@ -98,7 +98,7 @@ input:focus {
 
 .filter {
     display: flex;
-    width: 40%;
+    width: 45%;
     margin: 30px 30px 0px 30px;
     justify-content: space-between;
     align-items: center;
@@ -108,6 +108,7 @@ input:focus {
     height: 32px;
     width: 80px;
     font-size: 15px;
+    margin-right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,7 +133,6 @@ input:focus {
 }
 
 .image-card {
-    background-color: #f9f9f9;
     overflow: hidden;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -148,13 +148,13 @@ input:focus {
 
 .image-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 
 }
 
 .img-caption {
-    height: 15%;
+    height: 16%;
     padding: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -266,6 +266,7 @@ body.noscroll {
         height: 20px;
         width: 32px;
         font-size: 8px;
+        margin-right: 0;
     }
 
     .lyt-cnt {
