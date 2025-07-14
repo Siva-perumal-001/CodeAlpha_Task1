@@ -51,6 +51,7 @@ closeBtn.addEventListener("click", () => {
 const filterButtons = document.querySelectorAll(".tag");
 const searchInput = document.querySelector(".search-bar");
 const imageCards = document.querySelectorAll(".image-card");
+const imageCaptions = document.querySelectorAll(".img-caption");
 
 let activeCategory = "All";
 
@@ -85,7 +86,9 @@ function filterImages() {
 
     // Show only if both match
     if (matchCategory && matchSearch) {
-      card.style.display = "block";
+      card.style.display = "flex";
+      card.style.flexDirection = "column";
+
     } else {
       card.style.display = "none";
     }
